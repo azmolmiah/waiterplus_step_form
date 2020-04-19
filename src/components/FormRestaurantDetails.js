@@ -11,7 +11,7 @@ import InfoIcon from "@material-ui/icons/Info";
 const FormPersonalDetails = ({ nextStep, prevStep, values, handleChange }) => {
   const {
     restaurantName,
-    restaurantLocation,
+    restaurantAdress,
     restaurantPhone,
     restaurantBio,
   } = values;
@@ -57,10 +57,10 @@ const FormPersonalDetails = ({ nextStep, prevStep, values, handleChange }) => {
         <Grid item lg={3}>
           <TextField
             required
-            placeholder="Enter Restaurant Location"
-            label="Restaurant Location"
-            onChange={handleChange("restaurantLocation")}
-            defaultValue={restaurantLocation}
+            placeholder="Enter Restaurant Adress"
+            label="Restaurant Adress"
+            onChange={handleChange("restaurantAdress")}
+            defaultValue={restaurantAdress}
             fullWidth={true}
           />
         </Grid>

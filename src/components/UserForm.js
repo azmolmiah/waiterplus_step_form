@@ -12,7 +12,7 @@ export class UserForm extends Component {
     email: "",
     phone: "",
     restaurantName: "",
-    restaurantLocation: "",
+    restaurantAddress: "",
     restaurantPhone: "",
     restaurantBio: "",
   };
@@ -46,7 +46,7 @@ export class UserForm extends Component {
       email,
       phone,
       restaurantName,
-      restaurantLocation,
+      restaurantAddress,
       restaurantPhone,
       restaurantBio,
     } = this.state;
@@ -56,7 +56,7 @@ export class UserForm extends Component {
       email,
       phone,
       restaurantName,
-      restaurantLocation,
+      restaurantAddress,
       restaurantPhone,
       restaurantBio,
     };
