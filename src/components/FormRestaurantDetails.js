@@ -3,10 +3,18 @@ import AppBar from "@material-ui/core/AppBar";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
-import AccountCircle from "@material-ui/icons/AccountCircle";
+import StorefrontIcon from "@material-ui/icons/Storefront";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
+import LocalPhoneIcon from "@material-ui/icons/LocalPhone";
+import InfoIcon from "@material-ui/icons/Info";
 
 const FormPersonalDetails = ({ nextStep, prevStep, values, handleChange }) => {
-  const { occupation, city, bio } = values;
+  const {
+    restaurantName,
+    restaurantLocation,
+    restaurantPhone,
+    restaurantBio,
+  } = values;
 
   const continueToNextStep = (e) => {
     e.preventDefault();
@@ -21,22 +29,22 @@ const FormPersonalDetails = ({ nextStep, prevStep, values, handleChange }) => {
   return (
     <Fragment>
       <AppBar position="static">
-        <h1>Signup Form</h1>
+        <h1>Waiterplus</h1>
       </AppBar>
 
       <h2 style={{ marginTop: "1em" }}>Restaurant details</h2>
 
       <Grid container spacing={1} justify="center" alignItems="flex-end">
         <Grid item>
-          <AccountCircle />
+          <StorefrontIcon />
         </Grid>
         <Grid item lg={3}>
           <TextField
             required
-            placeholder="Enter Your Occupation"
-            label="Occupation"
-            onChange={handleChange("occupation")}
-            defaultValue={occupation}
+            placeholder="Enter Restaurant Name"
+            label="Restaurant Name"
+            onChange={handleChange("restaurantName")}
+            defaultValue={restaurantName}
             fullWidth={true}
           />
         </Grid>
@@ -44,15 +52,15 @@ const FormPersonalDetails = ({ nextStep, prevStep, values, handleChange }) => {
 
       <Grid container spacing={1} justify="center" alignItems="flex-end">
         <Grid item>
-          <AccountCircle />
+          <LocationOnIcon />
         </Grid>
         <Grid item lg={3}>
           <TextField
             required
-            placeholder="Enter Your City"
-            label="City"
-            onChange={handleChange("city")}
-            defaultValue={city}
+            placeholder="Enter Restaurant Location"
+            label="Restaurant Location"
+            onChange={handleChange("restaurantLocation")}
+            defaultValue={restaurantLocation}
             fullWidth={true}
           />
         </Grid>
@@ -60,15 +68,31 @@ const FormPersonalDetails = ({ nextStep, prevStep, values, handleChange }) => {
 
       <Grid container spacing={1} justify="center" alignItems="flex-end">
         <Grid item>
-          <AccountCircle />
+          <LocalPhoneIcon />
         </Grid>
         <Grid item lg={3}>
           <TextField
             required
-            placeholder="Enter Your Bio"
-            label="Bio"
-            onChange={handleChange("bio")}
-            defaultValue={bio}
+            placeholder="Enter Restaurant Phone"
+            label="Restaurant Phone"
+            onChange={handleChange("restaurantPhone")}
+            defaultValue={restaurantPhone}
+            fullWidth={true}
+          />
+        </Grid>
+      </Grid>
+
+      <Grid container spacing={1} justify="center" alignItems="flex-end">
+        <Grid item>
+          <InfoIcon />
+        </Grid>
+        <Grid item lg={3}>
+          <TextField
+            required
+            placeholder="Enter Restaurant Bio"
+            label="Restaurant Bio"
+            onChange={handleChange("restaurantBio")}
+            defaultValue={restaurantBio}
             fullWidth={true}
           />
         </Grid>
