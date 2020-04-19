@@ -92,7 +92,6 @@ const FormUserDetails = ({ nextStep, values, handleChange }) => {
       </Grid>
 
       <br />
-      <br />
       <Grid container justify="center">
         <Grid item>
           <Button
